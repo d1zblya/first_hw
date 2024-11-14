@@ -1,0 +1,25 @@
+2024-11-12 17:17:48.763 | ERROR    | services.service_books:create_book:17 - Failed to create book with details: Book(book_key=UUID('39955536-cb52-4962-ad52-57bf20f4bd9d'), title='Pushkin', author="The captain's daughter", year=1836). Error: Error binding parameter 1: type 'UUID' is not supported
+2024-11-12 17:20:56.033 | INFO     | services.service_books:create_book:14 - Book created with details: Book(book_key='64b0029f-fd61-4150-be8a-b8558da3be33', title='Pushkin', author="The captain's daughter", year=1836)
+2024-11-12 17:21:42.842 | INFO     | services.service_books:read_book_by_book_key:28 - Book with UUID 64b0029f-fd61-4150-be8a-b8558da3be33 found
+2024-11-12 17:22:15.207 | INFO     | services.service_books:create_book:14 - Book created with details: Book(book_key='e142f808-5ecc-4735-afd7-fca762b2263e', title='Пушкин', author='Капитанская дочка', year=1836)
+2024-11-12 17:22:44.395 | INFO     | services.service_books:read_book_by_book_key:28 - Book with UUID e142f808-5ecc-4735-afd7-fca762b2263e found
+2024-11-12 17:22:56.216 | INFO     | services.service_books:read_all_books:38 - Found 2 books
+2024-11-12 17:25:28.909 | INFO     | services.service_books:create_book:14 - Book created with details: Book(book_key='d1492aca-3d9e-4992-916d-e57fa28470a7', title='Хочу удалить эту книгу', author='Хочу удалить эту книгу', year=1700)
+2024-11-12 17:25:54.078 | INFO     | services.service_books:read_all_books:38 - Found 3 books
+2024-11-12 17:26:20.813 | INFO     | services.service_books:read_all_books:38 - Found 2 books
+2024-11-12 17:38:14.136 | INFO     | services.service_books:read_all_books:38 - Found 2 books
+2024-11-12 17:38:28.004 | ERROR    | services.service_books:read_book_by_book_key:26 - Book with UUID 123456789 not found
+2024-11-12 17:45:16.598 | INFO     | services.service_books:create_book:14 - Book created with details: Book(book_key='726a40a0-2dde-4fad-8783-712820995883', title='О нет', author='Артём', year=2024)
+2024-11-12 17:45:40.673 | INFO     | services.service_books:read_all_books:38 - Found 3 books
+2024-11-12 17:45:57.410 | INFO     | services.service_books:read_all_books:38 - Found 3 books
+2024-11-12 17:46:06.605 | INFO     | services.service_books:read_book_by_book_key:28 - Book with UUID 726a40a0-2dde-4fad-8783-712820995883 found
+2024-11-12 17:46:18.335 | INFO     | services.service_books:delete_book_by_book_key:55 - Book with UUID 726a40a0-2dde-4fad-8783-712820995883 successfully delete
+2024-11-12 17:46:23.824 | INFO     | services.service_books:read_all_books:38 - Found 2 books
+2024-11-12 17:46:25.012 | INFO     | services.service_books:read_all_books:38 - Found 2 books
+2024-11-14 15:51:10.735 | INFO     | services.service_books:create_book:14 - Book created with details: Book(book_key='15e6b09a-fe6c-4b37-bd87-4c9def6e3626', title='Герой нашего времени', author='НН', year=1700)
+2024-11-14 15:51:20.590 | INFO     | services.service_books:read_all_books:38 - Found 3 books
+2024-11-14 15:51:33.162 | INFO     | services.service_books:read_book_by_book_key:28 - Book with UUID 15e6b09a-fe6c-4b37-bd87-4c9def6e3626 found
+2024-11-14 15:52:02.739 | INFO     | services.service_books:update_book_by_book_key:45 - Book successfully updated with details: Book(book_key='15e6b09a-fe6c-4b37-bd87-4c9def6e3626', title='Изменил название книги', author='Изменил автора', year=1800)
+2024-11-14 15:52:10.258 | INFO     | services.service_books:read_all_books:38 - Found 3 books
+2024-11-14 15:52:21.801 | INFO     | services.service_books:delete_book_by_book_key:55 - Book with UUID 15e6b09a-fe6c-4b37-bd87-4c9def6e3626 successfully delete
+2024-11-14 15:52:28.630 | INFO     | services.service_books:read_all_books:38 - Found 2 books
