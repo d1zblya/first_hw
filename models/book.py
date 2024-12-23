@@ -1,9 +1,12 @@
-from dataclasses import dataclass
+from pydantic import BaseModel
+
+from models.author import Author
+from models.style import Style
 
 
-@dataclass
-class Book:
+class Book(BaseModel):
     book_key: str
     title: str
-    author: str
+    author: Author
     year: int
+    style: Style

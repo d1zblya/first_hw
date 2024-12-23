@@ -3,7 +3,7 @@ from typing import List
 from db.sqlitedict import SqliteDict
 from models.book import Book
 
-db = SqliteDict('books.db', autocommit=True)
+db = SqliteDict('db/books.db', autocommit=True)
 
 
 async def create_book(book: Book):

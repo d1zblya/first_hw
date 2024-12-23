@@ -2,6 +2,7 @@ from typing import List
 from uuid import UUID
 
 from exceptions.exceptions import ErrorBookNotFound, ErrorBookCreation, ErrorBookUpdate, ErrorBookDelete
+from models.style import Style
 from repositories import repository_books
 from models.book import Book
 
@@ -57,3 +58,24 @@ async def delete_book_by_book_key(book_key: str):
         msg = f"Failed delete book with details: {book_key} ---> Error: {str(e)}"
         logger.error(msg)
         raise ErrorBookDelete(msg)
+
+
+async def delete_all_books():
+    try:
+        await repository_books.delete_all_books()
+        logger.info(f"All books successfully deleted")
+    except Exception as e:
+        msg = f"Failed delete all books ---> Error: {str(e)}"
+        logger.error(msg)
+        raise ErrorBookDelete(msg)
+
+
+async def get_all_books_by_style(style: Style) -> List[Book] | None:
+    books_by_style = await repository_books.read_all_books()
+    if books_by_style is None:
+        msg = f"Not a single book was found"
+        logger.error(msg)
+        raise ErrorBookNotFound(msg)
+    books = [book for book in books_by_style if book.style == style]
+    logger.info(f"Found {len(books)} books")
+    return books
