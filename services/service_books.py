@@ -17,7 +17,6 @@ async def create_book(book: Book):
         msg = f"Failed create book with details: {book} ---> Error: {str(e)}"
         logger.error(msg)
         raise ErrorBookCreation(msg)
-    # await repository_books.create_book(book)
 
 
 async def read_book_by_book_key(book_key: str) -> Book | None:
@@ -70,7 +69,7 @@ async def delete_all_books():
         raise ErrorBookDelete(msg)
 
 
-async def get_all_books_by_style(style: Style) -> List[Book] | None:
+async def read_all_books_by_style(style: Style) -> List[Book] | None:
     books_by_style = await repository_books.read_all_books()
     if books_by_style is None:
         msg = f"Not a single book was found"

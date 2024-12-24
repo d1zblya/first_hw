@@ -33,7 +33,7 @@ async def read_all_books() -> List[Book]:
 
 @router.get("/all_books_by_style")
 async def read_all_books_by_style(style: Style) -> List[Book]:
-    return await service_books.get_all_books_by_style(style)
+    return await service_books.read_all_books_by_style(style)
 
 
 @router.put("/{book_key}/update")
