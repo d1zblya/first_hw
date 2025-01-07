@@ -11,7 +11,7 @@ async def create_book(book: Book):
 
 
 async def read_book_by_book_key(book_key: str) -> Book | None:
-    return db.get(book_key)
+    return db.get(book_key, None)
 
 
 async def read_all_books() -> List[Book] | None:

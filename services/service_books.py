@@ -17,6 +17,7 @@ async def create_book(book: Book):
         msg = f"Failed create book with details: {book} ---> Error: {str(e)}"
         logger.error(msg)
         raise ErrorBookCreation(msg)
+        # ErrorBookNotFound
 
 
 async def read_book_by_book_key(book_key: str) -> Book | None:
