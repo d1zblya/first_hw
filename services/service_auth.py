@@ -27,7 +27,11 @@ async def register_user(user: User):
     await repository_users.create_user(user)
 
 
-async def login_user(response: Response, email: EmailStr, password: str):
+async def login_user(
+    response: Response,
+    email: EmailStr,
+    password: str
+):
     try:
         user = await authenticate_user(email, password)
     except Exception as e:
